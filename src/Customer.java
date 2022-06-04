@@ -1,7 +1,8 @@
+import java.util.Scanner;
 public class Customer {
-    private int number = 0;
-    private String name = "";
-    private String[] names = {};
+    private int number;
+    private String name;
+    private String[] names;
 
     public Customer(){
     }
@@ -37,10 +38,29 @@ public class Customer {
     }
 
     public String NamesToString(){
+        int i=0;
+
         String returnValue = "";
-        for(int i=0;i<this.names.length; i++){
+        //for
+//        for(int i=0;i<this.names.length; i++){
+//            returnValue+=names[i]+" ";
+//        }
+        //foreach
+//        for (String name: names) {
+//            returnValue+=name+" ";
+//        }
+        //while
+//        while(i<this.names.length){
+//            returnValue+=names[i]+" ";
+//            i++;
+//        }
+
+        //do while
+        do {
             returnValue+=names[i]+" ";
-        }
+            i++;
+        }while (i<this.names.length);
+
         return returnValue;
     }
 }
